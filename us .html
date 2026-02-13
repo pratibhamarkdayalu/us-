@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> our Gallery </title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe Script', cursive;
+        background: linear-gradient(135deg, #fffaf3, #ffe6ec);
+        display: flex;
+        justify-content: center;
+        min-height: 150vh;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 photos in one line */
+        gap: 40px;
+        max-width: 1000px;
+        padding: 40px;
+    }
+
+    .card {
+        background: linear-gradient(145deg, #fec9ff, #b4fdfc);
+        border-radius: 20px;
+        padding: 15px;
+        text-align: center;
+        box-shadow:
+            0 20px 35px rgba(132, 44, 220, 0.424),
+            inset 0 0 10px rgba(245, 80, 80, 0.2);
+        transition: all 0.35s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-12px);
+        box-shadow:
+            0 30px 50px rgba(218, 165, 32, 0.4),
+            inset 0 0 15px rgba(255, 215, 0, 0.35);
+    }
+
+    .card img {
+        width: 100%;
+        height: 290px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    .love-text {
+        margin-top: 10px;
+        font-size: 20px;
+        color: #3f0a5a;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+        .gallery {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="gallery">
+    <div class="card">
+        <img src="ChatGPT Image Feb 10, 2026, 09_53_54 AM.png" alt="ChatGPT Image">
+        <div class="love-text">Are you tired? Because you’ve been running in my mind all day</div>
+    </div>
+
+    <div class="card">
+<img src="3f965a91802ad0594188cf21b096aeb1.jpg" alt="">
+        <div class="love-text">I don’t need Google… you’re already everything I’m searching for</div>
+    </div>
+
+    <div class="card">
+<img src="ChatGPT Image Feb 10, 2026, 11_01_24 AM.png" alt="">
+        <div class="love-text">s it cold in here or is it just me missing your hug?</div>
+    </div>
+
+    <div class="card">
+<img src="9efdbefcec1e23e6bc30be7a17ed3b17.jpg" alt="">
+        <div class="love-text">If loving you was a job, I’d work overtime every day</div>
+    </div>
+
+    <div class="card">
+<img src="48f2b5a3d6067331a136aa8ae562a35d.jpg" alt="">
+        <div class="love-text">You must be my favorite habit, because I can’t get enough of you</div>
+    </div>
+
+    <div class="card">
+      <img src="de3897530a92df5ad9e1f91f7e9e396a.jpg" alt="">
+        <div class="love-text">Are you magic? Because every time you smile, my mood changes</div>
+    </div>
+    <div class="card">
+      <img src="ChatGPT Image Feb 12, 2026, 11_22_49 PM.png" alt="">
+        <div class="love-text">I was going to flirt… but then I realized I already belong to you</div>
+    </div>
+
+    <div class="card">
+<img src="f40d936f5cb100290adbe5caf56fce8d.jpg" alt="">
+        <div class="love-text">You’re the reason my phone battery dies—can’t stop talking to you</div>
+    </div>
+
+    <div class="card">
+        <img src="d4e8310678e74c3b8102c8d8c5ade410.jpg" alt="Image 7">
+        <div class="love-text">If I had a rupee for every time I thought about you, I’d buy you something cute already</div>
+    </div>
+
+    <div class="card">
+        <img src="29b4b6d5bc3c7704708c227d5f73c921.jpg" alt="Image 9">
+        <div class="love-text">I don’t need a reason to smile… you’re enough</div>
+    </div>
+
+    <div class="card">
+        <img src="d1af56275f3423810027b0a67ade84e4.jpg" alt="Image 10">
+        <div class="love-text">Are you a song? Because you’re stuck in my head on repea</div>
+    </div>
+        <div class="card">
+      <img src="ChatGPT Image Feb 12, 2026, 11_24_26 PM.png" alt="">
+        <div class="love-text">Life feels softer, warmer, and better with you in it</div>
+    </div>
+    <div class="card">
+      <img src="ChatGPT Image Feb 12, 2026, 11_25_17 PM.png" alt="">
+        <div class="love-text">I was fine before you… but now I’m happier with you</div>
+    </div>
+    <div class="card">
+      <img src="f9347d8c5272daa6ba63de11285ed0a1.jpg" alt="">
+        <div class="love-text">You’re my favorite “hello” and my hardest “bye”</div>
+    </div>
+
+</div>
+
+</body>
+</html>

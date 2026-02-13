@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Be My Valentine ❤️</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .cursive { font-family: 'Great Vibes', cursive; }
+  </style>
+</head>
+<body class="bg-pink-50 min-h-screen flex items-center justify-center overflow-hidden">
+
+  <!-- Phase 1 -->
+  <div id="proposal" class="text-center transition-opacity duration-700">
+    <img src="3727afbe6ca619733cba6c07a6c4fcd7.gif" alt="Cute gif" class="mx-auto w-58 mb-6 rounded-xl">
+  
+    <h1 class="cursive text-4xl md:text-5xl text-pink-600 mb-8">Will you be my Valentine forever?</h1>
+
+    <div class="flex gap-6 justify-center relative">
+      <button id="yesBtn" class="bg-pink-500 text-white px-8 py-3 rounded-full text-lg shadow-lg transition-all duration-300">Yes 💖</button>
+      <button id="noBtn" class="bg-white text-pink-500 px-6 py-3 rounded-full text-lg shadow-md transition-all duration-300">No 🙈</button>
+    </div>
+  </div>
+
+  <!-- Phase 2 -->
+  <div id="celebration" class="hidden text-center px-4">
+    <div class="mx-auto w-48 h-48 bg-pink-200 clip-heart flex items-center justify-center mb-6">
+<img src="WhatsApp Image 2026-02-02 at 10.17.49 PM.jpeg" alt="">
+    </div>
+<p class="text-pink-700 text-lg md:text-xl mb-6 italic">    thank you mine tamater for being in my life for being mine ,<br>
+i always love you and i will always be yours <br> i am so blessed to have you in my life.
+    </p>
+<button id="storyBtn" class="text-pink-500 underline mt-4 block">
+   . 
+</button>
+<a href="us .html" class="bg-pink-500 text-white px-6 py-2 rounded-full shadow">, ek kahani sunu?</a>
+  </div>
+
+<script>
+  const noBtn = document.getElementById('noBtn');
+  const yesBtn = document.getElementById('yesBtn');
+  const proposal = document.getElementById('proposal');
+  const celebration = document.getElementById('celebration');
+  const musicBtn = document.getElementById('musicBtn');
+  const music = document.getElementById('music');
+
+  let scale = 1;
+  const guiltTexts = ["Are you sure?", "Think again!", "Puch lo phir se...", "Dil todega mera?"];
+
+  noBtn.addEventListener('mouseenter', () => {
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  });
+
+  noBtn.addEventListener('click', () => {
+    scale += 0.2;
+    yesBtn.style.transform = `scale(${scale})`;
+    noBtn.textContent = guiltTexts[Math.floor(Math.random() * guiltTexts.length)];
+  });
+
+  yesBtn.addEventListener('click', () => {
+    proposal.classList.add('opacity-0');
+    setTimeout(() => {
+      proposal.classList.add('hidden');
+      celebration.classList.remove('hidden');
+      confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
+    }, 700);
+  });
+
+  musicBtn.addEventListener('click', () => {
+    music.play();
+    musicBtn.textContent = '🎵 Playing...';
+  });
+</script>
+
+</body>
+</html>
